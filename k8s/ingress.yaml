@@ -4,11 +4,6 @@ metadata:
   name: ingress
 spec:
   ingressClassName: "nginx"
-  defaultBackend:
-    service:
-      name: circle-auth
-      port:
-        number: 80
   rules:
     - host: "ko-he-e.cloud.okteto.net"
       http:
