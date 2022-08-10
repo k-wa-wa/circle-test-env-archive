@@ -12,7 +12,8 @@ spec:
       port:
         number: 80
   rules:
-    - http:
+    - host: "ko-he-e.cloud.okteto.net"
+      http:
         paths:
           - backend:
               service:
