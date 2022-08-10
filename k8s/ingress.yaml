@@ -11,3 +11,13 @@ spec:
       name: circle-auth
       port:
         number: 80
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: circle-auth
+                port:
+                  number: 80
+            pathType: Prefix
+            path: "/"
