@@ -17,6 +17,12 @@ spec:
           image: kohee/circle-auth:latest
           ports:
             - containerPort: 80
+          env:
+            - name: APP_ID_API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: circle-auth-secret
+                  key: APP_ID_API_URL
 ---
 apiVersion: v1
 kind: Service

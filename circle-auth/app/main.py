@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 
+from presentation import userinfo
+
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-    return "ok"
+app.include_router(
+    userinfo.router,
+    prefix="/api"
+)
