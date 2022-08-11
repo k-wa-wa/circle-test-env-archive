@@ -1,0 +1,25 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: circle-test-env
+build:
+  artifacts:
+  - image: kohee/circle-auth
+    context: circle-auth
+    docker:
+      dockerfile: Dockerfile
+  - image: kohee/circle-router
+    context: circle-router
+    docker:
+      dockerfile: Dockerfile
+  - image: kohee/circle-web
+    context: circle-web
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8s/circle-auth-secret.yaml
+    - k8s/circle-auth.yaml
+    - k8s/circle-router.yaml
+    - k8s/circle-web.yaml

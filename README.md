@@ -8,7 +8,7 @@ docker build --platform amd64 -t kohee/circle-web:latest ./circle-web
 # docker run -p 3000:3000 -it kohee/circle-web:latest
 docker push kohee/circle-web:latest
 
-docker build -t kohee/circle-router:latest ./circle-router
+docker build --platform amd64  -t kohee/circle-router:latest ./circle-router
 docker push kohee/circle-router:latest
 ```
 
