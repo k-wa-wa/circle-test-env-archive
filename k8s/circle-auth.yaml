@@ -29,7 +29,7 @@ kind: Service
 metadata:
   name: circle-auth
   annotations:
-    dev.okteto.com/auto-ingress: "false"
+    dev.okteto.com/auto-ingress: "private"
 spec:
   selector:
     app: circle-auth

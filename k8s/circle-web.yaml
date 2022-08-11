@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: circle-web
   annotations:
-    dev.okteto.com/auto-ingress: "false"
+    dev.okteto.com/auto-ingress: "private"
 spec:
   selector:
     app: circle-web
