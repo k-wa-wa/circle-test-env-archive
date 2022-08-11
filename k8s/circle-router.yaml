@@ -29,6 +29,6 @@ spec:
     app: circle-router
   type: LoadBalancer
   ports:
-    - port: 8080
+    - port: 80
       protocol: TCP
       targetPort: 80

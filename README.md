@@ -24,4 +24,5 @@ kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 
 - secrets
 ```
 export KUBECONFIG=$HOME/Downloads/okteto-kube.config:${KUBECONFIG:-$HOME/.kube/config}
+kubectl apply -f k8s/circle-auth-secret.yaml
 ```

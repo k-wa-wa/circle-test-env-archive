@@ -23,3 +23,9 @@ deploy:
     - k8s/circle-auth.yaml
     - k8s/circle-router.yaml
     - k8s/circle-web.yaml
+portForward:
+- resourceType: Service
+  resourceName: circle-router
+  namespace: default
+  port: 80
+  localPort: 80
