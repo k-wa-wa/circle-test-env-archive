@@ -21,5 +21,7 @@ skaffold dev
 - secrets
 ```
 export KUBECONFIG=$HOME/Downloads/okteto-kube.config:${KUBECONFIG:-$HOME/.kube/config}
+kubectl config use-context cloud_okteto_com-context
 kubectl apply -f k8s/circle-auth-secret.yaml
+kubectl config use-context docker-desktop
 ```
