@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: ""
+    - host: "ko-he-e.cloud.okteto.net"
       http:
         paths:
         - pathType: Prefix
@@ -15,7 +15,8 @@ spec:
               name: circle-web
               port:
                 number: 80
-    - http:
+    - host: "ko-he-e.cloud.okteto.net"
+      http:
         paths:
           - pathType: Prefix
             path: /api
