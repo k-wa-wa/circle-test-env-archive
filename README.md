@@ -12,13 +12,9 @@ docker build --platform amd64  -t kohee/circle-router:latest ./circle-router
 docker push kohee/circle-router:latest
 ```
 
-- k8s
+- local
 ```shell
-# ingressのインストール
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
-
-kubectl apply -f k8s/
-kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 3000:80
+skaffold dev --port-forward
 ```
 
 - secrets

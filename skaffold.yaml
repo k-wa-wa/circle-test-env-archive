@@ -3,6 +3,8 @@ kind: Config
 metadata:
   name: circle-test-env
 build:
+  local:
+    push: false
   artifacts:
   - image: kohee/circle-auth
     context: circle-auth
