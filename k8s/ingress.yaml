@@ -25,3 +25,24 @@ spec:
                 name: circle-auth
                 port:
                   number: 80
+    # local用
+    - host: "localhost"
+      http:
+        paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: circle-web
+              port:
+                number: 80
+    - host: "localhost"
+      http:
+        paths:
+          - pathType: Prefix
+            path: /api
+            backend:
+              service:
+                name: circle-auth
+                port:
+                  number: 80
