@@ -1,2 +1,2 @@
 deploy:
-  - kubectl apply -f k8
+  - kubectl apply -f k8s/ -f k8s/deploy/
