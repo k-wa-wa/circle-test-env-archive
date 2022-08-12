@@ -14,7 +14,8 @@ docker push kohee/circle-router:latest
 
 - local
 ```shell
-skaffold dev --port-forward
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
+skaffold dev
 ```
 
 - secrets

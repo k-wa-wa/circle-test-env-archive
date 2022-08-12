@@ -10,10 +10,6 @@ build:
     context: circle-auth
     docker:
       dockerfile: Dockerfile
-  - image: kohee/circle-router
-    context: circle-router
-    docker:
-      dockerfile: Dockerfile
   - image: kohee/circle-web
     context: circle-web
     docker:
@@ -23,11 +19,5 @@ deploy:
     manifests:
     - k8s/circle-auth-secret.yaml
     - k8s/circle-auth.yaml
-    - k8s/circle-router.yaml
     - k8s/circle-web.yaml
-portForward:
-- resourceType: Service
-  resourceName: circle-router
-  namespace: default
-  port: 80
-  localPort: 80
+    - k8s/local/ingress.yaml
